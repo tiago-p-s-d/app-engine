@@ -1,0 +1,26 @@
+<main>
+    @if (pageData) {
+    @for (section of pageData.sections; track $index) {
+
+    @switch (section.type) {
+    @case ('header') {
+    <app-header [content]="section.data"></app-header>
+    }
+    @case ('footer') {
+    <app-footer [content]="section.data"></app-footer>
+    }
+    @case ('hero') {
+    <app-hero [content]="section.data"></app-hero>
+    }
+    @case ('cases') {
+    <app-cases [content]="section.data"></app-cases>
+    }
+    @case ('cta') {
+    <app-cta [content]="section.data"></app-cta>
+    }
+    }
+    }
+    } @else {
+    <p>Loading experience...</p>
+    }
+</main>

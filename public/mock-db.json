@@ -1,0 +1,85 @@
+{
+  "home": {
+    "slug": "home",
+    "title": "EulerApp | Smart Management",
+    "sections": [
+      {
+        "type": "header",
+        "data": {
+          "brandName": "EULER",
+          "userName": "Tiago",
+          "links": [
+            { "label": "AI Solutions", "url": "/solutions" },
+            { "label": "Features", "url": "/features" },
+            { "label": "Pricing", "url": "/pricing" }
+          ]
+        }
+      },
+      {
+        "type": "hero",
+        "data": {
+          "title": "Welcome to the Future of Management",
+          "subtitle": "Modular, scalable, and built for your growth."
+        }
+      },
+      {
+        "type": "cta",
+        "data": {
+          "text": "Ready to optimize your workflow?",
+          "label": "Get Started for Free"
+        }
+      },
+      {
+        "type": "footer",
+        "data": {}
+      }
+    ]
+  },
+  "cases": {
+    "slug": "cases",
+    "title": "Our Success Stories",
+    "sections": [
+      {
+        "type": "header",
+        "data": {
+          "brandName": "EULER",
+          "userName": "Tiago",
+          "links": [{ "label": "Back to Home", "url": "/" }]
+        }
+      },
+      {
+        "type": "hero",
+        "data": {
+          "title": "Proven Results",
+          "subtitle": "Discover how companies are scaling with EulerApp."
+        }
+      },
+      {
+        "type": "cases",
+        "data": {
+          "items": [
+            {
+              "title": "Global Logistics AI",
+              "description": "How we helped a shipping giant reduce costs by 30%.",
+              "image": "https://picsum.photos/seed/tech1/400/300"
+            },
+            {
+              "title": "Fintech Revolution",
+              "description": "Scaling a payment processor to handle 10k transactions/sec.",
+              "image": "https://picsum.photos/seed/tech2/400/300"
+            },
+            {
+              "title": "Cloud Migration",
+              "description": "Seamlessly moving legacy infrastructure to the modern edge.",
+              "image": "https://picsum.photos/seed/tech3/400/300"
+            }
+          ]
+        }
+      },
+      {
+        "type": "footer",
+        "data": {}
+      }
+    ]
+  }
+}

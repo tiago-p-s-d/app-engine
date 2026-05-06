@@ -1,0 +1,22 @@
+<section class="cases-container">
+  <div class="cases-header">
+    <span class="badge">Use Cases</span>
+    <h2>{{ content?.title || 'Built for every team' }}</h2>
+    <p>{{ content?.description || 'Discover how EulerApp adapts to your specific workflow.' }}</p>
+  </div>
+
+  <div class="cases-grid">
+    @for (item of content?.items; track $index) {
+      <div class="case-card">
+        <div class="card-image">
+          <img [src]="item.image" [alt]="item.title">
+        </div>
+        <div class="card-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <a class="learn-more">Learn more →</a>
+        </div>
+      </div>
+    }
+  </div>
+</section>

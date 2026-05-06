@@ -1,0 +1,41 @@
+<div class="admin-wrapper">
+  <h1>EulerApp Engine Builder</h1>
+
+  <section class="settings">
+    <h3>General Info</h3>
+    <input [(ngModel)]="newPage.slug" placeholder="Page Slug (ex: pricing)">
+    <input [(ngModel)]="newPage.title" placeholder="Browser Tab Title">
+  </section>
+
+  <hr>
+
+  <h3>Page Layout</h3>
+  <div class="sections-list">
+    @for (section of newPage.sections; track $index) {
+      <div class="section-card">
+        <header>
+          <strong>Block: {{ section.type | uppercase }}</strong>
+          <button (click)="removeSection($index)" class="delete-btn">Remove</button>
+        </header>
+
+        <!-- Campos dinâmicos baseados no tipo do bloco -->
+        @if (section.type === 'hero') {
+          <input [(ngModel)]="section.data.title" placeholder="Hero Title">
+          <textarea [(ngModel)]="section.data.subtitle" placeholder="Hero Subtitle"></textarea>
+        }
+
+        @if (section.type === 'cta') {
+          <input [(ngModel)]="section.data.text" placeholder="CTA Text">
+          <input [(ngModel)]="section.data.label" placeholder="Button Label">
+        }
+      </div>
+    }
+  </div>
+
+  <div class="add-controls">
+    <button (click)="addSection('hero')">+ Add Hero Block</button>
+    <button (click)="addSection('cta')">+ Add CTA Block</button>
+  </div>
+
+  <button class="save-btn" (click)="savePage()">GENERATE PAGE JSON</button>
+</div>

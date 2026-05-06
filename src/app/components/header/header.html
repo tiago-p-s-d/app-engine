@@ -1,0 +1,21 @@
+<header class="main-header"> <div class="header-left">
+    <div class="logo-area" routerLink="/">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="brand-name">{{ content?.brandName || 'EULER' }}</span>
+    </div>
+
+    <nav class="nav-links"> @for (link of content?.links; track $index) {
+        <a [routerLink]="link.url">{{ link.label }}</a>
+      }
+    </nav>
+  </div>
+
+  <div class="header-right">
+    <span class="user-greeting">Hi, {{ content?.userName || 'Tiago' }}</span>
+    
+    <button class="btn-secondary">Sign In</button>
+    <button class="btn-primary">Schedule Demo</button>
+  </div>
+</header>
