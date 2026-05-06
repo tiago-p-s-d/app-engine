@@ -5,3 +5,34 @@ input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; border: 1px so
 button { cursor: pointer; padding: 8px 16px; border-radius: 4px; border: none; background: #007bff; color: white; margin-right: 5px; }
 .delete-btn { background: #dc3545; }
 .save-btn { background: #28a745; width: 100%; margin-top: 20px; font-size: 1.2rem; }
+
+.existing-pages {
+  background: #eef2ff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #d0d7ff;
+}
+
+.page-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-link {
+  background: white;
+  color: #0047ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid #0047ff;
+  transition: all 0.2s;
+}
+
+.page-link:hover {
+  background: #0047ff;
+  color: white;
+}

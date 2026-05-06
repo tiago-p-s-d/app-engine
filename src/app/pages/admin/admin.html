@@ -1,4 +1,18 @@
 <div class="admin-wrapper">
+  
+  <section class="existing-pages">
+    <h3>📂 Live Pages (from mock-db)</h3>
+    <div class="page-tags">
+      @for (slug of existingPages; track slug) {
+        <a [routerLink]="['/' + slug]" class="page-link" target="_blank">
+          {{ slug | uppercase }} ↗
+        </a>
+      }
+    </div>
+  </section>
+
+  <hr>
+
   <h1>EulerApp Engine Builder</h1>
 
   <section class="settings">
@@ -18,7 +32,6 @@
           <button (click)="removeSection($index)" class="delete-btn">Remove</button>
         </header>
 
-        <!-- Campos dinâmicos baseados no tipo do bloco -->
         @if (section.type === 'hero') {
           <input [(ngModel)]="section.data.title" placeholder="Hero Title">
           <textarea [(ngModel)]="section.data.subtitle" placeholder="Hero Subtitle"></textarea>
@@ -37,5 +50,7 @@
     <button (click)="addSection('cta')">+ Add CTA Block</button>
   </div>
 
-  <button class="save-btn" (click)="savePage()">GENERATE PAGE JSON</button>
+  <button class="save-btn" (click)="savePage()" [disabled]="!newPage.slug">
+    GENERATE PAGE JSON
+  </button>
 </div>
